@@ -114,6 +114,7 @@ country_event = {
 			any_pop = { limit = { OR = { has_pop_culture = romanian has_pop_culture = pan_romanian has_pop_culture = bulgarian } type = bureaucrats } reduce_pop = 4.5 }
             any_pop = { limit = { OR = { has_pop_culture = romanian has_pop_culture = pan_romanian has_pop_culture = bulgarian } type = capitalists } reduce_pop = 3.5 }
 			any_pop = { limit = { has_pop_culture = turkish } reduce_pop = 0.8 }
+			any_pop = { literacy = 0.35 }  
 		}
 	}
 }
@@ -158,6 +159,78 @@ country_event = {
 			release = HUR
 		}
 		HUR = {
+			#Army Doctrine
+			activate_technology = post_napoleonic_thought 
+			activate_technology = strategic_mobility 
+			#Light Armament
+			activate_technology = flintlock_rifles 
+			activate_technology = muzzle_loaded_rifles 
+			#Heavy Armament
+			activate_technology = bronze_muzzle_loaded_artillery 
+			activate_technology = iron_muzzle_loaded_artillery 
+			#Military Science
+			activate_technology = military_staff_system 
+			activate_technology = military_plans 
+			#Army Leadership
+			activate_technology = army_command_principle
+			activate_technology = army_professionalism 
+			##Naval Doctrine
+			#Naval Doctrin
+			#contruction
+			activate_technology = clipper_design 
+			activate_technology = steamers
+			#Naval Engineering 
+			activate_technology = naval_design_bureaus 
+			activate_technology = fire_control_systems 
+			#Naval Science
+			activate_technology = alphabetic_flag_signaling 
+			activate_technology = naval_plans 
+			#Naval Leadership
+			activate_technology = the_command_principle 
+			activate_technology = naval_professionalism 
+			#Financhial Institutions
+			activate_technology = private_banks
+			activate_technology = stock_exchange
+			#Monetary System
+			activate_technology = no_standard
+			activate_technology = ad_hoc_money_bill_printing
+			activate_technology = private_bank_money_bill_printing
+			#Administration
+			activate_technology = early_classical_theory_and_critique 
+			activate_technology = late_classical_theory 
+			activate_technology = collectivist_theory 
+			#Market Functionality
+			activate_technology = freedom_of_trade
+			activate_technology = market_structure
+			activate_technology = business_regulations
+			#Organization
+			activate_technology = guild_based_production 
+			activate_technology = organized_factories 
+			activate_technology = scientific_management 
+			#Social Thought
+			activate_technology = malthusian_thought 
+			activate_technology = positivism 
+			activate_technology = functionalism 
+			#Political Thought
+			activate_technology = ideological_thought 
+			#Psycology
+			activate_technology = introspectionism 
+			activate_technology = associationism 
+			##Industry
+			#Power
+			activate_technology = piston_steam_engine
+			activate_technology = high_pressure_steam_engine 
+			activate_technology = hot_blast	
+			#Mechanization
+			activate_technology = mechanical_production
+			activate_technology = interchangeable_parts
+			#Metallugry
+			activate_technology = hot_blast	
+			#Infrastructure
+			activate_technology = experimental_railroad
+			#Chemistry and Electricity
+			activate_technology = basic_chemistry 
+			activate_technology = medicine 
 			years_of_research = 20
 			money = 8000000
 			leadership = 730
@@ -183,6 +256,7 @@ country_event = {
 			any_pop = { limit = { OR = { has_pop_culture = romanian has_pop_culture = pan_romanian has_pop_culture = hungarian } type = bureaucrats } reduce_pop = 4.5 }
 			any_pop = { limit = { OR = { has_pop_culture = romanian has_pop_culture = pan_romanian has_pop_culture = hungarian } type = capitalists } reduce_pop = 3.5 }
 			any_pop = { limit = { has_pop_culture = turkish } reduce_pop = 0.8 }
+			any_pop = { literacy = 0.35 }  
 		}
 	}
 }
@@ -339,21 +413,10 @@ country_event = {
 		LIT = { all_core = { add_core = PLC remove_core = LIT } }
 		POL = { all_core = { add_core = PLC remove_core = POL } }
 		PLC = {	all_core = { remove_core = RUS remove_core = AUS remove_core = PRU } }
-		RUS = { release = PLC }
-		AUS = { release = PLC }
-		PRU = { release = PLC }
-		THIS = { country_event = 51110 }
-	}
-	option = {
-		name = "PLROPT"
-		LIT = { all_core = { add_core = PLR } }
-		POL = { all_core = { add_core = PLR } }
-		RUT = { all_core = { add_core = PLR } }
-		PLR = {	all_core = { remove_core = RUS remove_core = AUS remove_core = PRU } }
 		any_country = {
-			release = PLR
+			release = PLC
 		}
-		THIS = { country_event = 51111 }
+		THIS = { country_event = 51110 }
 	}
 	option = {
 		name = "WSFOPT"
@@ -385,6 +448,78 @@ country_event = {
 	option = {
 		name = "PLCOPT"
 		PLC = {
+			#Army Doctrine
+			activate_technology = post_napoleonic_thought 
+			activate_technology = strategic_mobility 
+			#Light Armament
+			activate_technology = flintlock_rifles 
+			activate_technology = muzzle_loaded_rifles 
+			#Heavy Armament
+			activate_technology = bronze_muzzle_loaded_artillery 
+			activate_technology = iron_muzzle_loaded_artillery 
+			#Military Science
+			activate_technology = military_staff_system 
+			activate_technology = military_plans 
+			#Army Leadership
+			activate_technology = army_command_principle
+			activate_technology = army_professionalism 
+			##Naval Doctrine
+			#Naval Doctrin
+			#contruction
+			activate_technology = clipper_design 
+			activate_technology = steamers
+			#Naval Engineering 
+			activate_technology = naval_design_bureaus 
+			activate_technology = fire_control_systems 
+			#Naval Science
+			activate_technology = alphabetic_flag_signaling 
+			activate_technology = naval_plans 
+			#Naval Leadership
+			activate_technology = the_command_principle 
+			activate_technology = naval_professionalism 
+			#Financhial Institutions
+			activate_technology = private_banks
+			activate_technology = stock_exchange
+			#Monetary System
+			activate_technology = no_standard
+			activate_technology = ad_hoc_money_bill_printing
+			activate_technology = private_bank_money_bill_printing
+			#Administration
+			activate_technology = early_classical_theory_and_critique 
+			activate_technology = late_classical_theory 
+			activate_technology = collectivist_theory 
+			#Market Functionality
+			activate_technology = freedom_of_trade
+			activate_technology = market_structure
+			activate_technology = business_regulations
+			#Organization
+			activate_technology = guild_based_production 
+			activate_technology = organized_factories 
+			activate_technology = scientific_management 
+			#Social Thought
+			activate_technology = malthusian_thought 
+			activate_technology = positivism 
+			activate_technology = functionalism 
+			#Political Thought
+			activate_technology = ideological_thought 
+			#Psycology
+			activate_technology = introspectionism 
+			activate_technology = associationism 
+			##Industry
+			#Power
+			activate_technology = piston_steam_engine
+			activate_technology = high_pressure_steam_engine 
+			activate_technology = hot_blast	
+			#Mechanization
+			activate_technology = mechanical_production
+			activate_technology = interchangeable_parts
+			#Metallugry
+			activate_technology = hot_blast	
+			#Infrastructure
+			activate_technology = experimental_railroad
+			#Chemistry and Electricity
+			activate_technology = basic_chemistry 
+			activate_technology = medicine 
             money = 2000000
             prestige = 30
             leadership = 1020
@@ -441,6 +576,78 @@ country_event = {
 	option = {
 		name = "PLCOPT"
 		WSF = {
+						#Army Doctrine
+						activate_technology = post_napoleonic_thought 
+						activate_technology = strategic_mobility 
+						#Light Armament
+						activate_technology = flintlock_rifles 
+						activate_technology = muzzle_loaded_rifles 
+						#Heavy Armament
+						activate_technology = bronze_muzzle_loaded_artillery 
+						activate_technology = iron_muzzle_loaded_artillery 
+						#Military Science
+						activate_technology = military_staff_system 
+						activate_technology = military_plans 
+						#Army Leadership
+						activate_technology = army_command_principle
+						activate_technology = army_professionalism 
+						##Naval Doctrine
+						#Naval Doctrin
+						#contruction
+						activate_technology = clipper_design 
+						activate_technology = steamers
+						#Naval Engineering 
+						activate_technology = naval_design_bureaus 
+						activate_technology = fire_control_systems 
+						#Naval Science
+						activate_technology = alphabetic_flag_signaling 
+						activate_technology = naval_plans 
+						#Naval Leadership
+						activate_technology = the_command_principle 
+						activate_technology = naval_professionalism 
+						#Financhial Institutions
+						activate_technology = private_banks
+						activate_technology = stock_exchange
+						#Monetary System
+						activate_technology = no_standard
+						activate_technology = ad_hoc_money_bill_printing
+						activate_technology = private_bank_money_bill_printing
+						#Administration
+						activate_technology = early_classical_theory_and_critique 
+						activate_technology = late_classical_theory 
+						activate_technology = collectivist_theory 
+						#Market Functionality
+						activate_technology = freedom_of_trade
+						activate_technology = market_structure
+						activate_technology = business_regulations
+						#Organization
+						activate_technology = guild_based_production 
+						activate_technology = organized_factories 
+						activate_technology = scientific_management 
+						#Social Thought
+						activate_technology = malthusian_thought 
+						activate_technology = positivism 
+						activate_technology = functionalism 
+						#Political Thought
+						activate_technology = ideological_thought 
+						#Psycology
+						activate_technology = introspectionism 
+						activate_technology = associationism 
+						##Industry
+						#Power
+						activate_technology = piston_steam_engine
+						activate_technology = high_pressure_steam_engine 
+						activate_technology = hot_blast	
+						#Mechanization
+						activate_technology = mechanical_production
+						activate_technology = interchangeable_parts
+						#Metallugry
+						activate_technology = hot_blast	
+						#Infrastructure
+						activate_technology = experimental_railroad
+						#Chemistry and Electricity
+						activate_technology = basic_chemistry 
+						activate_technology = medicine 
             money = 2000000
             prestige = 30
             leadership = 820

@@ -137,16 +137,6 @@ country_event = {
 			release = NZF
 		}
 		NZF = {
-			set_country_flag = post_colonial_country
-			2510 = { state_scope = { change_region_name = "Ile du Nord" } }
-			2516 = { state_scope = { change_region_name = "Ile du Sud" } }
-			2509 = { change_province_name = "Valenmans" }
-			2510 = { change_province_name = "Nouvelle-Bordeaux" }
-			2511 = { change_province_name = "Perouse" }
-			2512 = { change_province_name = "Nouvelle-Marseilles" }
-			2513 = { change_province_name = "Michel" }
-			2515 = { change_province_name = "Jeanne" }
-			2516 = { change_province_name = "Akaroa" }
 			money = 2000000
 			leadership = 130
 			government = hms_government
@@ -162,14 +152,10 @@ country_event = {
 			build_factory_in_capital_state = canned_food_factory
 			build_factory_in_capital_state = liquor_distillery
 			build_factory_in_capital_state = small_arms_factory 
-			any_owned_province = { add_province_modifier = { name = baby_boom duration = 1095 } }
-			add_country_modifier = { name = global_baby_boom duration = 3650 }
 			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
-			any_pop = { literacy = 0.50 }
-			middle_strata = { reduce_pop = 2 } poor_strata = { reduce_pop = 2 } rich_strata = { reduce_pop = 2 } 
 			any_owned = { assimilate = yes }
-			any_pop = { limit = { has_pop_culture = neo_zelandais type = soldiers } reduce_pop = 5.9 }
-			any_pop = { limit = { has_pop_culture = neo_zelandais type = bureaucrats } reduce_pop = 4.5 }
+			any_pop = { limit = { has_pop_culture = neo_zelandais type = soldiers } reduce_pop = 2.9 }
+			any_pop = { limit = { has_pop_culture = neo_zelandais type = bureaucrats } reduce_pop = 3.5 }
 			any_pop = { limit = { has_pop_culture = neo_zelandais type = craftsmen } reduce_pop = 5.5 }
 			any_pop = { literacy = 0.40 }
 		}
@@ -188,7 +174,17 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTFRENCHCOLONIESCASKOA"
-		NZF = { any_pop = { limit = { has_pop_culture = neo_zelandais type = craftsmen } reduce_pop = 4.5 } }
+		NZF = { any_pop = { limit = { has_pop_culture = neo_zelandais type = craftsmen } reduce_pop = 4.5 } 
+		2510 = { state_scope = { change_region_name = "Ile du Nord" } }
+		2516 = { state_scope = { change_region_name = "Ile du Sud" } }
+		2509 = { change_province_name = "Valenmans" }
+		2510 = { change_province_name = "Nouvelle-Bordeaux" }
+		2511 = { change_province_name = "Perouse" }
+		2512 = { change_province_name = "Nouvelle-Marseilles" }
+		2513 = { change_province_name = "Michel" }
+		2515 = { change_province_name = "Jeanne" }
+		2516 = { change_province_name = "Akaroa" }
+		}
 	}
 }
 ####################################################
