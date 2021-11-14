@@ -1,0 +1,308 @@
+##################################################
+#################British Canada###################
+##################################################
+country_event = {
+	id = 500030
+	title = "EVTNAMEFRENCHCOLONIESCASKO"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	option = {
+	name = "EVTOPTBRITISHCOLONIESCASKO"		
+		RPL = { all_core = { add_core = CAN } }
+		QUE = { all_core = { add_core = CAN } }
+		NEW = { all_core = { add_core = CAN } }
+    	RPL = { all_core = { remove_core = RPL } }
+		any_country = { release = CAN }
+		CAN = {
+			money = 20000000
+			leadership = 730
+			government = hms_government
+			machine_parts = 600000
+			steel = 60000 #was iron
+			cement = 600000
+			liquor = 600000
+			wine = 600000
+			small_arms = 60000
+			artillery = 600000
+			canned_food = 600000
+			build_factory_in_capital_state = fabric_factory
+			build_factory_in_capital_state = canned_food_factory
+			build_factory_in_capital_state = liquor_distillery
+			build_factory_in_capital_state = small_arms_factory 
+			any_owned_province = { add_province_modifier = { name = baby_boom duration = 3095 } }
+			add_country_modifier = { name = global_baby_boom duration = 3650 }
+			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+            any_pop = { literacy = 0.58 }  
+			middle_strata = { reduce_pop = 2 } poor_strata = { reduce_pop = 2 } rich_strata = { reduce_pop = 2 } 
+			any_pop = { limit = { has_pop_culture = anglo_canadian type = soldiers } reduce_pop = 5.3 }
+			any_pop = { limit = { has_pop_culture = anglo_canadian type = bureaucrats } reduce_pop = 5.5 }
+			any_pop = { limit = { has_pop_culture = anglo_canadian type = capitalists } reduce_pop = 4.5 }
+		}
+    }
+}
+country_event = {
+	id = 500240
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	trigger = {
+		year = 1837
+		tag = CAN
+	}
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		CAN = { any_pop = { limit = { has_pop_culture = anglo_canadian type = craftsmen } reduce_pop = 4.5 } }
+	}
+}
+##################################################
+#################British Australia################
+##################################################
+country_event = {
+	id = 500032
+	title = "EVTNAMEFRENCHCOLONIESCASKO"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	option = {
+	name = "EVTOPTBRITISHCOLONIESCASKO"		
+		any_country = { release = AST }
+		AST = {
+			money = 2000000
+			leadership = 130
+			government = hms_government
+			machine_parts = 600000
+			steel = 60000 #was iron
+			cement = 600000
+			liquor = 600000
+			wine = 600000
+			small_arms = 60000
+			artillery = 600000
+			canned_food = 600000
+			build_factory_in_capital_state = fabric_factory
+			build_factory_in_capital_state = canned_food_factory
+			build_factory_in_capital_state = liquor_distillery
+			build_factory_in_capital_state = small_arms_factory 
+			any_owned_province = { add_province_modifier = { name = baby_boom duration = 3095 } }
+			add_country_modifier = { name = global_baby_boom duration = 3650 }
+			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+            any_pop = { literacy = 0.58 }
+			any_owned = { assimilate = yes }  
+			middle_strata = { reduce_pop = 2 } poor_strata = { reduce_pop = 2 } rich_strata = { reduce_pop = 2 } 
+			any_pop = { limit = { has_pop_culture = australian type = soldiers } reduce_pop = 5.3 }
+			any_pop = { limit = { has_pop_culture = australian type = bureaucrats } reduce_pop = 5.5 }
+			any_pop = { limit = { has_pop_culture = australian type = capitalists } reduce_pop = 4.5 }        
+		}
+	}
+}
+country_event = {
+	id = 500241
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	trigger = {
+		year = 1837
+		tag = AST
+	}
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		AST = { any_pop = { limit = { has_pop_culture = australian type = craftsmen } reduce_pop = 4.5 } }
+	}
+}
+##################################################
+#################British Carribian################
+##################################################
+country_event = {
+	id = 500033
+	title = "EVTNAMEFRENCHCOLONIESCASKO"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	option = {
+	name = "EVTOPTBRITISHCOLONIESCASKO"
+		ENG = { any_owned = { limit = { OR = { region = ENG_2224 region = ENG_2228 region = ENG_203 region = ENG_1979 region = UCA_2186 region = UCA_2197 } } add_core = CRB remove_core = ENG remove_core = FRA remove_core = BOR } release = CRB }
+		random_country = { limit = { primary_culture = french capital = 425 } country_event = 99992 }
+		set_global_flag = caribbean_federation_formed
+        CRB = {
+			money = 2000000
+			leadership = 130
+			government = hms_government
+			machine_parts = 60000
+			steel = 60000 #was iron
+			cement = 60000
+			liquor = 6000
+			wine = 60000
+			small_arms = 60000
+			artillery = 60000 
+			canned_food = 60000
+			build_factory_in_capital_state = fabric_factory
+			build_factory_in_capital_state = canned_food_factory
+			build_factory_in_capital_state = liquor_distillery
+			build_factory_in_capital_state = small_arms_factory 
+			any_owned_province = { add_province_modifier = { name = baby_boom duration = 1095 } }
+			add_country_modifier = { name = global_baby_boom duration = 3650 }
+			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			any_pop = { literacy = 0.35 }
+			any_owned = { assimilate = yes }
+			any_pop = { limit = { OR = { has_pop_culture = afro_caribbean } type = soldiers } reduce_pop = 5.9 }
+			any_pop = { limit = { OR = { has_pop_culture = afro_caribbean } type = bureaucrats } reduce_pop = 4.5 }
+			any_pop = { limit = { OR = { has_pop_culture = afro_caribbean } type = craftsmen } reduce_pop = 5.5 }
+			any_pop = { limit = { OR = { has_pop_culture = afro_caribbean } type = capitalists } reduce_pop = 3.5 }
+		}
+	}
+}
+country_event = {
+	id = 500242
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	trigger = {
+		year = 1837
+		tag = CRB
+	}
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		CRB = { any_pop = { limit = { has_pop_culture = afro_caribbean type = craftsmen } reduce_pop = 4.5 } }
+	}
+}
+##################################################
+#################British West Indies##############
+##################################################
+country_event = {
+	id = 500034
+	title = "EVTNAMEFRENCHCOLONIESCASKO"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	option = {
+	name = "EVTOPTBRITISHCOLONIESCASKO"
+		2222 = { add_core = ATC }
+        CUB = { all_core = { add_core = ATC } }
+        DOM = { all_core = { add_core = ATC } }
+		any_country = { release = ATC }
+		ATC = {
+			inherit = HAI
+			prestige = 20
+			money = 2000000
+			leadership = 130
+			government = hms_government
+			machine_parts = 6000
+			steel = 6000 #was iron
+			cement = 6000
+			liquor = 600
+			wine = 6000
+			small_arms = 6000
+			artillery = 6000 
+			canned_food = 6000
+			build_factory_in_capital_state = fabric_factory
+			build_factory_in_capital_state = canned_food_factory
+			build_factory_in_capital_state = liquor_distillery
+			build_factory_in_capital_state = small_arms_factory 
+			any_owned_province = { add_province_modifier = { name = baby_boom duration = 1095 } }
+			add_country_modifier = { name = global_baby_boom duration = 3650 }
+			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			any_pop = { literacy = 0.35 }
+			any_owned = { assimilate = yes }
+			any_pop = { limit = { OR = { has_pop_culture = caribeno } type = soldiers } reduce_pop = 2.9 }
+			any_pop = { limit = { OR = { has_pop_culture = caribeno } type = bureaucrats } reduce_pop = 4.5 }
+			any_pop = { limit = { OR = { has_pop_culture = caribeno } type = capitalist } reduce_pop = 3.0 }
+		}
+	}
+}
+country_event = {
+	id = 500243
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	trigger = {
+		year = 1837
+		tag = ATC
+	}
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		ATC = { any_pop = { limit = { has_pop_culture = caribeno type = craftsmen } reduce_pop = 4.5 } }
+	}
+}
+##################################################
+#################British New################
+##################################################
+country_event = {
+	id = 500031
+	title = "EVTNAMEFRENCHCOLONIESCASKO"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	option = {
+	name = "EVTOPTBRITISHCOLONIESCASKO"
+		any_country = { release = NZL }
+		NZL = { all_core = { remove_core = ENG } }		
+		NZL = {
+    	    2510 = { change_province_name = "New Plymouth" life_rating = 2 }
+    	    2511 = { change_province_name = "Napier" life_rating = 1 }
+    	    2512 = { change_province_name = "Wellington" life_rating = 3 }
+    	    2513 = { change_province_name = "Dunedin" life_rating = 1 trade_goods = precious_metal }
+    	    2515 = { change_province_name = "Christchurch" life_rating = 8 }
+    	    2516 = { change_province_name = "Nelson" life_rating = 2 }
+    	    2509 = { life_rating = 8 } #Auckland
+    	    2571 = { life_rating = 5 } #Tauranga
+    	    2514 = { life_rating = 2 }
+			money = 20000000
+			leadership = 530
+			government = hms_government
+			machine_parts = 600000
+			steel = 60000 #was iron
+			cement = 600000
+			liquor = 600000
+			wine = 600000
+			small_arms = 60000
+			artillery = 600000
+			canned_food = 600000
+			build_factory_in_capital_state = fabric_factory
+			build_factory_in_capital_state = canned_food_factory
+			build_factory_in_capital_state = liquor_distillery
+			build_factory_in_capital_state = small_arms_factory 
+			any_owned_province = { add_province_modifier = { name = baby_boom duration = 3095 } }
+			add_country_modifier = { name = global_baby_boom duration = 3650 }
+			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			any_pop = { literacy = 0.58 }  
+			any_pop = { limit = { has_pop_culture = kiwi type = soldiers } reduce_pop = 5.9 }
+			any_pop = { limit = { has_pop_culture = kiwi type = bureaucrats } reduce_pop = 4.5 }
+            any_pop = { limit = { has_pop_culture = kiwi type = capitalists } reduce_pop = 3.5 }
+			add_province_modifier = { name = colonial_recruitment duration = 365 }
+		}
+	}
+}
+country_event = {
+	id = 500244
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	trigger = {
+		year = 1837
+		tag = NZF
+	}
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		NZF = { any_pop = { limit = { has_pop_culture = kiwi type = craftsmen } reduce_pop = 4.5 } }
+	}
+}

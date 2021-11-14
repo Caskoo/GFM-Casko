@@ -1,0 +1,63 @@
+leader = {
+    name = "Prince Aleksandar"
+    type = land
+    date="1836.1.1"
+    personality = openminded
+    background = gifted_administrator
+}
+
+army = {
+    name = "Army of the Principality of Serbia"
+    location = 670
+    regiment = {
+        name= "1st Serbian Infantry"
+        type = infantry
+        home = 670
+    }
+
+    regiment = {
+        name= "2nd Serbian Infantry"
+        type = infantry
+        home = 3372
+    }
+}
+army = {
+    name = "Army of the Principality of Serbia"
+    location = 664
+    regiment = {
+        name= "1st Serbian Infantry"
+        type = infantry
+        home = 3371
+    }
+
+    regiment = {
+        name= "2nd Serbian Infantry"
+        type = infantry
+        home = 675
+    }
+        regiment = {
+        name= "2nd Serbian Infantry"
+        type = infantry
+        home = 675
+    }
+        regiment = {
+        name= "2nd Serbian Infantry"
+        type = infantry
+        home = 809
+    }
+    regiment = {
+        name= "2nd Regiment Royal Artillery"
+        type = artillery
+        home = 809
+    }
+    regiment = {
+        name= "8th Regiment Royal Artillery"
+        type = artillery
+        home = 809
+    }
+    regiment = {
+        name= "9th Regiment Royal Artillery"
+        type = artillery
+        home = 809
+    }
+}

@@ -1,0 +1,99 @@
+political_decisions = {
+    casko_poland = {
+        picture = treaty_signing
+        potential = {
+			has_country_flag = casko_release_nations_options
+			NOT = {  exists = PLC exists = POL exists = WSF exists = PLR }
+        }
+        allow = {
+			NOT = {
+                has_country_flag = release_the_baltics 
+                exists = PLC
+                exists = POL
+				exists = PLR
+				exists = WSF
+            }
+        }
+        effect = {
+            country_event = 51100
+        }
+        ai_will_do = { factor = 0 }
+    }
+    casko_ukraine = {
+        picture = treaty_signing
+        potential = {
+			has_country_flag = casko_release_nations_options
+			NOT = { exists = UKR }
+        }
+        allow = { NOT = {  exists = UKR } }
+        effect = {
+            UKR = { all_core = { remove_core = RUS } }
+            country_event = 16091
+
+        }
+        ai_will_do = { factor = 0 }
+    }
+    casko_yugoslavia = {
+        potential = {
+			has_country_flag = casko_release_nations_options
+            NOT = { exists = YUG }
+        }
+        allow = {
+            NOT = { exists = YUG }
+        }
+        effect = {
+            set_global_flag = yugoslavia_formed
+            country_event = 1600000002
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    casko_bulgaria_romania = {
+        potential = {
+            picture = map_balkans
+			has_country_flag = casko_release_nations_options
+            NOT = { exists = BGR }
+        }
+        allow = {
+            NOT = { exists = BGR }
+        }
+        effect = {
+            country_event = 16090
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    casko_hungary_romania = {
+        potential = {
+            picture = map_balkans
+			has_country_flag = casko_release_nations_options
+            NOT = { exists = HUR }
+        }
+        allow = {
+            NOT = { exists = HUR }
+        }
+        effect = {
+            country_event = 16093
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    casko_buff_finland = {
+        potential = {
+            picture = map_balkans
+			has_country_flag = casko_release_nations_options
+        }
+        allow = {
+        }
+        effect = {
+            RUS_339 = { add_core = FIN }
+            RUS = { release = FIN }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+}

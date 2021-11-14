@@ -1,0 +1,92 @@
+political_decisions = {
+    british_colonial_canada_title = {
+    picture = vive_le_quebec
+        potential = {
+            has_country_flag = casko_release_nations_options
+            NOT = { has_global_flag = colonies_releasedCAN_casko
+            }
+        }
+        allow = {
+            NOT = { exists = FCA }
+        }
+        effect = {
+            set_global_flag = colonies_releasedCAN_casko
+            country_event = 500030
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    british_colonial_newzeland_title = {
+    picture = vive_le_quebec
+        potential = {
+            has_country_flag = casko_release_nations_options
+            NOT = { has_global_flag = colonies_releasedNZL_casko
+            }
+        }
+        allow = {
+            NOT = { exists = NZL }
+        }
+        effect = {
+            set_global_flag = colonies_releasedNZL_casko
+            country_event = 500031
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    british_colonial_australia_title = {
+    picture = vive_le_quebec
+        potential = {
+            has_country_flag = casko_release_nations_options
+            NOT = { has_global_flag = colonies_releasedAST_casko
+            }
+        }
+        allow = {
+            NOT = { exists = AST }
+        }
+        effect = {
+            set_global_flag = colonies_releasedAST_casko
+            country_event = 500032
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    british_colonial_carribian_title = {
+    picture = vive_le_quebec
+        potential = {
+            has_country_flag = casko_release_nations_options
+            NOT = { has_global_flag = colonies_releasedCRB_casko
+            }
+        }
+        allow = {
+            NOT = { exists = CRB }
+        }
+        effect = {
+            set_global_flag = colonies_releasedCRB_casko
+            country_event = 500033
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    british_colonial_carribian2_title = {
+    picture = vive_le_quebec
+        potential = {
+            has_country_flag = casko_release_nations_options
+            NOT = { has_global_flag = colonies_releasedATC_casko
+            }
+        }
+        allow = {
+            NOT = { exists = ATC }
+        }
+        effect = {
+            set_global_flag = colonies_releasedATC_casko
+            country_event = 500034
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+}

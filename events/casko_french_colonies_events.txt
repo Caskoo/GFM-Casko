@@ -1,0 +1,264 @@
+####################################################
+#################French Canada######################
+####################################################
+country_event = {
+	id = 500040
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		FCA = {
+			money = 2000000
+			leadership = 530
+			government = hms_government
+			machine_parts = 600000
+			steel = 600000 #was iron
+			cement = 600000
+			liquor = 600000
+			wine = 600000
+			small_arms = 600000
+			artillery = 600000
+			canned_food = 600000
+			build_factory_in_capital_state = fabric_factory
+			build_factory_in_capital_state = canned_food_factory
+			build_factory_in_capital_state = liquor_distillery
+			build_factory_in_capital_state = small_arms_factory 
+			any_owned_province = { add_province_modifier = { name = baby_boom duration = 1095 } }
+			add_country_modifier = { name = global_baby_boom duration = 3650 }
+			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			any_pop = { literacy = 0.40 }
+			capital = 58
+			middle_strata = { reduce_pop = 2 } poor_strata = { reduce_pop = 2 } rich_strata = { reduce_pop = 2 } 
+			any_owned = { assimilate = yes }
+			any_pop = { limit = { has_pop_culture = french_canadian type = soldiers } reduce_pop = 5.3 }
+			any_pop = { limit = { has_pop_culture = french_canadian type = bureaucrats } reduce_pop = 5.5 }
+			any_pop = { limit = { has_pop_culture = french_canadian type = capitalists } reduce_pop = 4.5 }
+			any_pop = { reduce_pop = 4 }
+			249 = { trade_goods = coal }
+			16 = { trade_goods = coal }
+			26 = { trade_goods = sulphur }
+		}
+	}
+}
+country_event = {
+	id = 500140
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	trigger = {
+		year = 1837
+		tag = FCA
+	}
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		FCA = { any_pop = { limit = { has_pop_culture = french_canadian type = craftsmen } reduce_pop = 4.5 } }
+	}
+}
+#######################################################
+#################French Australia######################
+#######################################################
+country_event = {
+	id = 500041
+	title = "ass2"
+	desc = "ass4"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = "dreams_of_empire"
+	option = {
+		name = "ASSS1"
+        AST = { all_core = { add_core = FAS remove_core = AST } }
+        any_country = { release = FAS }
+        FAS = {
+            money = 800000
+			leadership = 730
+			government = hms_government
+			machine_parts = 60000
+			steel = 60000 #was iron
+			cement = 60000
+			liquor = 60000
+			wine = 60000
+			small_arms = 60000
+			artillery = 60000
+			canned_food = 60000
+			build_factory_in_capital_state = fabric_factory
+			build_factory_in_capital_state = canned_food_factory
+			build_factory_in_capital_state = liquor_distillery
+			build_factory_in_capital_state = small_arms_factory 
+			any_owned_province = { add_province_modifier = { name = baby_boom duration = 1095 } }
+			add_country_modifier = { name = global_baby_boom duration = 3650 }
+			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			middle_strata = { reduce_pop = 2 } poor_strata = { reduce_pop = 2 } rich_strata = { reduce_pop = 2 } 
+			any_owned = { assimilate = yes }
+			any_pop = { limit = { has_pop_culture = french_australian type = soldiers } reduce_pop = 5.9 }
+			any_pop = { limit = { has_pop_culture = french_australian type = bureaucrats } reduce_pop = 4.5 }
+			any_pop = { limit = { has_pop_culture = french_australian type = craftsmen } reduce_pop = 5.5 }
+			any_pop = { literacy = 0.40 }
+		}
+    }
+}
+country_event = {
+	id = 500141
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	trigger = {
+		year = 1837
+		tag = FAS
+	}
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		FAS = { any_pop = { limit = { has_pop_culture = french_australian type = craftsmen } reduce_pop = 4.5 } }
+	}
+}
+######################################################
+#################French New Zealand###################
+######################################################
+country_event = {
+	id = 500042
+	title = "EVTNAMEFRENCHCOLONIESCASKO"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = "map_new_zealand"
+	option = {
+	name = "EVTOPTFRENCHCOLONIESCASKO"
+		NZL = { all_core = { add_core = NZF remove_core = NZL } }
+		any_country = {
+			release = NZF
+		}
+		NZF = {
+			set_country_flag = post_colonial_country
+			2510 = { state_scope = { change_region_name = "Ile du Nord" } }
+			2516 = { state_scope = { change_region_name = "Ile du Sud" } }
+			2509 = { change_province_name = "Valenmans" }
+			2510 = { change_province_name = "Nouvelle-Bordeaux" }
+			2511 = { change_province_name = "Perouse" }
+			2512 = { change_province_name = "Nouvelle-Marseilles" }
+			2513 = { change_province_name = "Michel" }
+			2515 = { change_province_name = "Jeanne" }
+			2516 = { change_province_name = "Akaroa" }
+			money = 2000000
+			leadership = 130
+			government = hms_government
+			machine_parts = 60000
+			steel = 60000 #was iron
+			cement = 60000
+			liquor = 60000
+			wine = 60000
+			small_arms = 60000
+			artillery = 60000
+			canned_food = 60000
+			build_factory_in_capital_state = fabric_factory
+			build_factory_in_capital_state = canned_food_factory
+			build_factory_in_capital_state = liquor_distillery
+			build_factory_in_capital_state = small_arms_factory 
+			any_owned_province = { add_province_modifier = { name = baby_boom duration = 1095 } }
+			add_country_modifier = { name = global_baby_boom duration = 3650 }
+			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			any_pop = { literacy = 0.50 }
+			middle_strata = { reduce_pop = 2 } poor_strata = { reduce_pop = 2 } rich_strata = { reduce_pop = 2 } 
+			any_owned = { assimilate = yes }
+			any_pop = { limit = { has_pop_culture = neo_zelandais type = soldiers } reduce_pop = 5.9 }
+			any_pop = { limit = { has_pop_culture = neo_zelandais type = bureaucrats } reduce_pop = 4.5 }
+			any_pop = { limit = { has_pop_culture = neo_zelandais type = craftsmen } reduce_pop = 5.5 }
+			any_pop = { literacy = 0.40 }
+		}
+	}
+}
+country_event = {
+	id = 500142
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	trigger = {
+		year = 1837
+		tag = NZF
+	}
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		NZF = { any_pop = { limit = { has_pop_culture = neo_zelandais type = craftsmen } reduce_pop = 4.5 } }
+	}
+}
+####################################################
+#################French Louisiana###################
+####################################################
+country_event = {
+	id = 500043
+	title = "EVTNAMEFRENCHCOLONIESCASKO"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = "map_new_zealand"
+	option = {
+	name = "EVTOPTFRENCHCOLONIESCASKO"
+		any_country = {
+			release = NZF
+		}
+		NZF = {
+			set_country_flag = post_colonial_country
+			2510 = { state_scope = { change_region_name = "Ile du Nord" } }
+			2516 = { state_scope = { change_region_name = "Ile du Sud" } }
+			2509 = { change_province_name = "Valenmans" }
+			2510 = { change_province_name = "Nouvelle-Bordeaux" }
+			2511 = { change_province_name = "Perouse" }
+			2512 = { change_province_name = "Nouvelle-Marseilles" }
+			2513 = { change_province_name = "Michel" }
+			2515 = { change_province_name = "Jeanne" }
+			2516 = { change_province_name = "Akaroa" }
+			money = 2000000
+			leadership = 130
+			government = hms_government
+			machine_parts = 60000
+			steel = 60000 #was iron
+			cement = 60000
+			liquor = 60000
+			wine = 60000
+			small_arms = 60000
+			artillery = 60000
+			canned_food = 60000
+			build_factory_in_capital_state = fabric_factory
+			build_factory_in_capital_state = canned_food_factory
+			build_factory_in_capital_state = liquor_distillery
+			build_factory_in_capital_state = small_arms_factory 
+			any_owned_province = { add_province_modifier = { name = baby_boom duration = 1095 } }
+			add_country_modifier = { name = global_baby_boom duration = 3650 }
+			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			any_pop = { literacy = 0.50 }
+			middle_strata = { reduce_pop = 2 } poor_strata = { reduce_pop = 2 } rich_strata = { reduce_pop = 2 } 
+			any_owned = { assimilate = yes }
+			any_pop = { limit = { has_pop_culture = neo_zelandais type = soldiers } reduce_pop = 5.9 }
+			any_pop = { limit = { has_pop_culture = neo_zelandais type = bureaucrats } reduce_pop = 4.5 }
+			any_pop = { limit = { has_pop_culture = neo_zelandais type = craftsmen } reduce_pop = 5.5 }
+			any_pop = { literacy = 0.40 }
+		}
+	}
+}
+country_event = {
+	id = 500149
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	trigger = {
+		year = 1837
+		tag = NZF
+	}
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		NZF = { any_pop = { limit = { has_pop_culture = neo_zelandais type = craftsmen } reduce_pop = 4.5 } }
+	}
+}

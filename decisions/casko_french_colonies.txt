@@ -1,0 +1,105 @@
+political_decisions = {
+    french_colonial_canada = {
+        picture = vive_le_quebec
+        potential = {
+            has_country_flag = casko_release_nations_options
+            NOT = { has_global_flag = colonies_releasedFCA_casko
+            }
+        }
+        allow = {
+            NOT = { exists = FCA }
+        }
+        effect = {
+            CAN = { all_core = { add_core = FCA remove_core = CAN } }
+		    QUE = { all_core = { add_core = FCA remove_core = QUE } }
+		    NEW = { all_core = { add_core = FCA remove_core = NEW } }
+		    RPL = { all_core = { add_core = FCA remove_core = RPL } }
+		    MRU = { all_core = { add_core = FCA remove_core = MRU } }
+		    ACA = { all_core = { add_core = FCA remove_core = ACA } }
+            COL = { all_core = { remove_core = COL  add_core = FCA } }
+            FCA = { all_core = { remove_core = USA } }
+            any_country = {
+		        release = FCA
+			}
+            country_event = 500040
+            set_global_flag = colonies_releasedFCA_casko
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    french_colonial_australia = {
+        picture = dreams_of_empire
+        potential = {
+            has_country_flag = casko_release_nations_options
+            NOT = { has_global_flag = colonies_releasedFSA_casko
+            }
+        }
+        allow = {
+            NOT = { exists = FSA }
+        }
+        effect = {
+            set_global_flag = colonies_releasedFSA_casko
+            country_event = 500041
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    french_colonial_zealand = {
+        picture = map_new_zealand
+        potential = {
+            has_country_flag = casko_release_nations_options
+            NOT = { has_global_flag = colonies_releasedNZF_casko
+            }
+        }
+        allow = {
+            NOT = { exists = NZF }
+        }
+        effect = {
+            set_global_flag = colonies_releasedNZF_casko
+            country_event = 500042
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    french_colonial_louisiana = {
+        picture = dreams_of_empire
+        potential = {
+            has_country_flag = casko_release_nations_options
+            NOT = { has_global_flag = colonies_releasedULA_casko
+            }
+        }
+        allow = {
+            NOT = { exists = ULA }
+        }
+        effect = {
+            set_global_flag = colonies_releasedULA_casko
+            USA_139 = { add_core = ULA } #Louisiana
+            USA_144 = { add_core = ULA } #Arkansas
+            USA_148 = { add_core = ULA } #Missouri
+            USA_118 = { add_core = ULA } #North Dakota
+            USA_121 = { add_core = ULA } #South Dakota
+            USA_124 = { add_core = ULA } #Nebraska
+            USA_151 = { add_core = ULA } #Idaho
+            USA_158 = { add_core = ULA } #Iowa
+            USA_116 = { add_core = ULA } #Montana
+            127 = { add_core = ULA } #Kansas
+            126 = { add_core = ULA }
+            130 = { add_core = ULA } #Oklahoma
+            131 = { add_core = ULA }
+            106 = { add_core = ULA }
+            3468 = { add_core = ULA } #Wyoming
+            112 = { add_core = ULA }
+            118 = { add_core = ULA }
+            156 = { add_core = ULA }
+            24 = { add_core = ULA }
+            30 = { add_core = ULA }
+            country_event = 500043
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+}

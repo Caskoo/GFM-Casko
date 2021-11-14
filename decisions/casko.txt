@@ -1,0 +1,34 @@
+political_decisions = {
+	casko_options = {
+        alert = yes
+        picture = crazynigga
+        potential = {
+            ai = no
+            NOT = { has_country_flag = casko_release_nations_options }
+            NOT = { year = 1837 }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            set_country_flag = casko_release_nations_options
+        }
+    }
+    disable_casko_options = {
+        alert = no
+        picture = crazynigga
+        potential = {
+            ai = no
+            has_country_flag = casko_release_nations_options
+            NOT = { year = 1837 }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            clr_country_flag = casko_release_nations_options
+        }
+    }
+}

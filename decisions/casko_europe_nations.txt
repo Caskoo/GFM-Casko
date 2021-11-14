@@ -1,0 +1,70 @@
+political_decisions = {
+    form_south_german_confederation_casko_title = {
+        picture = treaty_signing
+        potential = {
+			has_country_flag = casko_release_nations_options
+            NOT = { exists = SGF }
+        }
+        allow = {
+            NOT = { exists = SGF }
+        }
+        effect = {
+			BAV = { all_core = { add_core = SGF } }
+            WUR = { all_core = { add_core = SGF } }
+            BAD = { all_core = { add_core = SGF } }
+            SGM = { all_core = { add_core = SGF } }
+            any_country = { release = SGF }
+            SGF = {
+                money = 2000000
+                prestige = 9
+                political_reform = federalism
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    die_belgeum_title = {
+        picture = treaty_signing
+        potential = {    
+            tag = NET
+            exists = BEL
+        }
+        allow = {
+            Not = { 
+                has_country_flag = die_belgeum 
+                tag = BEL
+            }
+        }
+        effect = {
+            inherit = BEL
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    form_bnf_net = {
+        picture = bel_lion
+        potential = {
+            tag = NET
+			NOT = { exists = BNF }
+        }
+        allow = {
+			NET = { all_core = { owned_by = THIS } }
+        }
+        effect = {
+            BEL = { all_core = { add_core = BNF } }
+			NET = { all_core = { add_core = BNF } }
+			397 = { add_core = BNF }
+			381 = { add_core = BNF }
+			change_tag = BNF
+			add_accepted_culture = dutch
+			add_accepted_culture = frisian
+			primary_culture = flemish
+			prestige = 20
+			badboy = 7
+        }
+        ai_will_do = { factor = 0 }
+    }
+}
