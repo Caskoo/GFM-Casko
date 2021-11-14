@@ -232,7 +232,7 @@ country_event = {
 			activate_technology = basic_chemistry 
 			activate_technology = medicine 
 			years_of_research = 20
-			money = 8000000
+			money = 80000000
 			leadership = 730
 			government = hms_government
 			machine_parts = 600000
@@ -520,6 +520,7 @@ country_event = {
 			#Chemistry and Electricity
 			activate_technology = basic_chemistry 
 			activate_technology = medicine 
+			capital = 706
             money = 2000000
             prestige = 30
             leadership = 1020
@@ -539,7 +540,7 @@ country_event = {
             create_alliance = PRU
             diplomatic_influence = { who = PRU value = 200 }
             random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
-			middle_strata = { reduce_pop = 2 } poor_strata = { reduce_pop = 2 } rich_strata = { reduce_pop = 2 } 
+			middle_strata = { reduce_pop = 1 } poor_strata = { reduce_pop = 1 } rich_strata = { reduce_pop = 1 } 
 			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = soldiers } reduce_pop = 5.9 }
 			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = bureaucrats } reduce_pop = 4.5 }
 			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = capitalists } reduce_pop = 3.5 }

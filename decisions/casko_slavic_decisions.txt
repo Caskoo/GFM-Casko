@@ -90,7 +90,9 @@ political_decisions = {
         }
         effect = {
             RUS_339 = { add_core = FIN }
-            RUS = { release = FIN }
+            RUS_349 = { add_core = UBD }
+            RUS_354 = { add_core = UBD }
+            RUS = { release = FIN release = UBD }
         }
         ai_will_do = {
             factor = 0
