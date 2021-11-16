@@ -47,12 +47,6 @@ country_event = {
         2101 = { change_province_name = "Bloemfontein" add_core = ORA add_core = SAF }
         2102 = { remove_core = MAT add_core = ORA add_core = SAF change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
         2103 = { change_province_name = "Philippolis" add_core = ORA add_core = SAF }
-		any_owned = {
-			limit = {
-				NOT = { life_rating = 35 }
-			}
-			life_rating = 15
-		}
 		any_country = {
 			release = ORA		
 		}
@@ -77,12 +71,6 @@ country_event = {
         2101 = { change_province_name = "Bloemfontein" add_core = ORA add_core = SAF }
         2102 = { remove_core = MAT add_core = ORA add_core = SAF change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
         2103 = { change_province_name = "Philippolis" add_core = ORA add_core = SAF }
-		any_owned = {
-			limit = {
-				NOT = { life_rating = 35 }
-			}
-			life_rating = 15
-		}
 		any_country = {
 				release = TRN	
 			}
@@ -114,7 +102,6 @@ country_event = {
 		2101 = { change_province_name = "Bloemfontein" }
 		2102 = { change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
 		2103 = { change_province_name = "Philippolis" }
-
 		any_country = {
 			release = VLK	
 		}
@@ -162,13 +149,16 @@ country_event = {
         	create_alliance = NET
         	diplomatic_influence = { who = PRU value = 200 }
         	random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
-			assimilate = yes
+			any_owned = { assimilate = yes }
 			middle_strata = { reduce_pop = 1 } poor_strata = { reduce_pop = 1 } rich_strata = { reduce_pop = 1 } 
 			any_pop = { limit = { has_pop_culture = boer type = soldiers } reduce_pop = 3.0 }
 			any_pop = { limit = { has_pop_culture = boer type = bureaucrats } reduce_pop = 4.5 }
 			any_pop = { limit = { has_pop_culture = boer type = capitalists } reduce_pop = 3.5 }
 			any_pop = { literacy = 0.55 }  
 		}
+		ai_chance = {
+            factor = 100
+        }
 	}
 }
 country_event = {
@@ -220,12 +210,15 @@ country_event = {
             create_alliance = PRU
             diplomatic_influence = { who = PRU value = 200 }
             random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
-			assimilate = yes
+			any_owned = { assimilate = yes }
 			middle_strata = { reduce_pop = 1 } poor_strata = { reduce_pop = 1 } rich_strata = { reduce_pop = 1 } 
 			any_pop = { limit = { has_pop_culture = boer type = soldiers } reduce_pop = 3.0 }
 			any_pop = { limit = { has_pop_culture = boer type = bureaucrats } reduce_pop = 4.5 }
 			any_pop = { limit = { has_pop_culture = boer type = capitalists } reduce_pop = 3.5 }
 			any_pop = { literacy = 0.55 }  
+        }
+		ai_chance = {
+            factor = 100
         }
 	}
 }
@@ -245,12 +238,6 @@ country_event = {
 		PLC = { any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = craftsmen } reduce_pop = 2.0 } }
 	}
 }
-
-
-
-
-
-
 #TRN
 country_event = {
 	id = 61003
@@ -284,12 +271,15 @@ country_event = {
             create_alliance = PRU
             diplomatic_influence = { who = PRU value = 200 }
             random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
-			assimilate = yes
+			any_owned = { assimilate = yes }
 			middle_strata = { reduce_pop = 1 } poor_strata = { reduce_pop = 1 } rich_strata = { reduce_pop = 1 } 
 			any_pop = { limit = { has_pop_culture = boer type = soldiers } reduce_pop = 3.0 }
 			any_pop = { limit = { has_pop_culture = boer type = bureaucrats } reduce_pop = 4.5 }
 			any_pop = { limit = { has_pop_culture = boer type = capitalists } reduce_pop = 3.5 }
 			any_pop = { literacy = 0.55 }  
+        }
+		ai_chance = {
+            factor = 100
         }
 	}
 }
@@ -341,12 +331,15 @@ country_event = {
             create_alliance = NET
             diplomatic_influence = { who = PRU value = 200 }
             random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
-			assimilate = yes
+			any_owned = { assimilate = yes }
 			middle_strata = { reduce_pop = 1 } poor_strata = { reduce_pop = 1 } rich_strata = { reduce_pop = 1 } 
 			any_pop = { limit = { has_pop_culture = boer type = soldiers } reduce_pop = 3.0 }
 			any_pop = { limit = { has_pop_culture = boer type = bureaucrats } reduce_pop = 4.5 }
 			any_pop = { limit = { has_pop_culture = boer type = capitalists } reduce_pop = 3.5 }
 			any_pop = { literacy = 0.55 }  
+        }
+		ai_chance = {
+            factor = 100
         }
 	}
 }
@@ -452,6 +445,10 @@ country_event = {
 		#Chemistry and Electricity
 		activate_technology = basic_chemistry 
 		activate_technology = medicine 
+		clr_country_flag = casko_tech
+	}
+	ai_chance = {
+		factor = 100
 	}
 }
 #####################################################
@@ -472,5 +469,9 @@ country_event = {
 		}
 		life_rating = 15
 		}
+		clr_country_flag = casko_south_africa
+	}
+	ai_chance = {
+		factor = 100
 	}
 }
