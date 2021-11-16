@@ -19,4 +19,18 @@ political_decisions = {
         }
         ai_will_do = { factor = 0 }
     }
+	casko_tech_flag_check = {
+        potential = {
+            ai = no
+        }
+        allow = {
+            OR = {
+                ORA = { has_country_flag = casko_tech }
+                TRN = { has_country_flag = casko_tech }
+            }
+        }
+        effect = {
+            prestige = 1
+        }
+    }
 }

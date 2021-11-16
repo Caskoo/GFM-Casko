@@ -26,15 +26,9 @@ country_event = {
 			release = TRN
 			release = ORA		
 		}
-		any_country = {
-			limit = {
-				tag = TRN
-				tag = ORA
-			}
-			add_county
-		}
+		TRN = { set_country_flag = casko_tech set_country_flag = casko_south_africa }
+		ORA = {	set_country_flag = casko_tech set_country_flag = casko_south_africa }
 		THIS = { country_event = 61001 }
-		THIS = { country_event = 555555 days = 3 }
 	}
     option = {
         name = "ORA_RELEASE"
@@ -53,11 +47,17 @@ country_event = {
         2101 = { change_province_name = "Bloemfontein" add_core = ORA add_core = SAF }
         2102 = { remove_core = MAT add_core = ORA add_core = SAF change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
         2103 = { change_province_name = "Philippolis" add_core = ORA add_core = SAF }
+		any_owned = {
+			limit = {
+				NOT = { life_rating = 35 }
+			}
+			life_rating = 15
+		}
 		any_country = {
 			release = ORA		
 		}
+		ORA = {	set_country_flag = casko_tech set_country_flag = casko_south_africa }
 		THIS = { country_event = 61002 }
-		THIS = { country_event = 555555 days = 3 }
 	}
 	option = {
 		name = "TRN_RELEASE"
@@ -77,11 +77,17 @@ country_event = {
         2101 = { change_province_name = "Bloemfontein" add_core = ORA add_core = SAF }
         2102 = { remove_core = MAT add_core = ORA add_core = SAF change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
         2103 = { change_province_name = "Philippolis" add_core = ORA add_core = SAF }
-			any_country = {
+		any_owned = {
+			limit = {
+				NOT = { life_rating = 35 }
+			}
+			life_rating = 15
+		}
+		any_country = {
 				release = TRN	
 			}
-			THIS = { country_event = 61002 }
-			THIS = { country_event = 555555 days = 3 }
+			TNA = { set_country_flag = casko_tech set_country_flag = casko_south_africa }
+			THIS = { country_event = 61003 }
 	}
 	option = {
 	name = "VLK_RELEASE"
@@ -108,11 +114,12 @@ country_event = {
 		2101 = { change_province_name = "Bloemfontein" }
 		2102 = { change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
 		2103 = { change_province_name = "Philippolis" }
+
 		any_country = {
 			release = VLK	
 		}
-		THIS = { country_event = 61003 }
-		THIS = { country_event = 555555 days = 3 }
+		VLK = { set_country_flag = casko_tech set_country_flag = casko_south_africa }
+		THIS = { country_event = 61004 }
 	}
 }
 ########################################################
@@ -155,11 +162,12 @@ country_event = {
         	create_alliance = NET
         	diplomatic_influence = { who = PRU value = 200 }
         	random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			assimilate = yes
 			middle_strata = { reduce_pop = 1 } poor_strata = { reduce_pop = 1 } rich_strata = { reduce_pop = 1 } 
-			any_pop = { limit = { has_pop_culture = boer type = soldiers } reduce_pop = 5.9 }
+			any_pop = { limit = { has_pop_culture = boer type = soldiers } reduce_pop = 3.0 }
 			any_pop = { limit = { has_pop_culture = boer type = bureaucrats } reduce_pop = 4.5 }
 			any_pop = { limit = { has_pop_culture = boer type = capitalists } reduce_pop = 3.5 }
-			any_pop = { literacy = 0.35 }  
+			any_pop = { literacy = 0.55 }  
 		}
 	}
 }
@@ -191,6 +199,7 @@ country_event = {
 	option = {
 		name = "PLCOPT"
 		ORA = {
+			civilized = yes
 			capital = 2101
             money = 2000000
             prestige = 30
@@ -211,16 +220,17 @@ country_event = {
             create_alliance = PRU
             diplomatic_influence = { who = PRU value = 200 }
             random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			assimilate = yes
 			middle_strata = { reduce_pop = 1 } poor_strata = { reduce_pop = 1 } rich_strata = { reduce_pop = 1 } 
-			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = soldiers } reduce_pop = 5.9 }
-			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = bureaucrats } reduce_pop = 4.5 }
-			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = capitalists } reduce_pop = 3.5 }
-			any_pop = { literacy = 0.35 }  
+			any_pop = { limit = { has_pop_culture = boer type = soldiers } reduce_pop = 3.0 }
+			any_pop = { limit = { has_pop_culture = boer type = bureaucrats } reduce_pop = 4.5 }
+			any_pop = { limit = { has_pop_culture = boer type = capitalists } reduce_pop = 3.5 }
+			any_pop = { literacy = 0.55 }  
         }
 	}
 }
 country_event = {
-	id = 500145
+	id = 62002
 	title = "asss5"
 	desc = "EVTDESCFRENCHCOLONIESCASKO"
 	major = yes
@@ -274,16 +284,17 @@ country_event = {
             create_alliance = PRU
             diplomatic_influence = { who = PRU value = 200 }
             random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			assimilate = yes
 			middle_strata = { reduce_pop = 1 } poor_strata = { reduce_pop = 1 } rich_strata = { reduce_pop = 1 } 
-			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = soldiers } reduce_pop = 5.9 }
-			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = bureaucrats } reduce_pop = 4.5 }
-			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = capitalists } reduce_pop = 3.5 }
-			any_pop = { literacy = 0.35 }  
+			any_pop = { limit = { has_pop_culture = boer type = soldiers } reduce_pop = 3.0 }
+			any_pop = { limit = { has_pop_culture = boer type = bureaucrats } reduce_pop = 4.5 }
+			any_pop = { limit = { has_pop_culture = boer type = capitalists } reduce_pop = 3.5 }
+			any_pop = { literacy = 0.55 }  
         }
 	}
 }
 country_event = {
-	id = 500145
+	id = 62003
 	title = "asss5"
 	desc = "EVTDESCFRENCHCOLONIESCASKO"
 	major = yes
@@ -300,7 +311,7 @@ country_event = {
 }
 #VLK
 country_event = {
-	id = 61003
+	id = 61004
     title = "EVTNAME10PLCCASKO"
     desc = "EVTDESC10PLCCASKO"
     major = yes
@@ -310,6 +321,7 @@ country_event = {
 	option = {
 		name = "PLCOPT"
 		VLK = {
+			civilized = yes
             money = 2000000
             prestige = 30
             leadership = 1020
@@ -326,19 +338,20 @@ country_event = {
             build_factory_in_capital_state = canned_food_factory
             build_factory_in_capital_state = liquor_distillery
             build_factory_in_capital_state = small_arms_factory
-            create_alliance = PRU
+            create_alliance = NET
             diplomatic_influence = { who = PRU value = 200 }
             random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			assimilate = yes
 			middle_strata = { reduce_pop = 1 } poor_strata = { reduce_pop = 1 } rich_strata = { reduce_pop = 1 } 
-			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = soldiers } reduce_pop = 5.9 }
-			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = bureaucrats } reduce_pop = 4.5 }
-			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = capitalists } reduce_pop = 3.5 }
-			any_pop = { literacy = 0.35 }  
+			any_pop = { limit = { has_pop_culture = boer type = soldiers } reduce_pop = 3.0 }
+			any_pop = { limit = { has_pop_culture = boer type = bureaucrats } reduce_pop = 4.5 }
+			any_pop = { limit = { has_pop_culture = boer type = capitalists } reduce_pop = 3.5 }
+			any_pop = { literacy = 0.55 }  
         }
 	}
 }
 country_event = {
-	id = 500145
+	id = 62004
 	title = "asss5"
 	desc = "EVTDESCFRENCHCOLONIESCASKO"
 	major = yes
@@ -346,7 +359,7 @@ country_event = {
 	picture = "american-civil-war"
 	trigger = {
 		year = 1837
-		tag = PLC
+		tag = VLK
 	}
 	option = {
 		name = "EVTOPTFRENCHCOLONIESCASKOA"
@@ -360,88 +373,104 @@ country_event = {
 	id = 555555
 	title = "TECH"
 	desc = "EVTDESCFRENCHCOLONIESCASKO"
-	major = yes
-	fire_only_once = yes
 	picture = "american-civil-war"
+	trigger = { has_country_flag = casko_tech }
+	mean_time_to_happen = { months = 1 modifier = { factor = 0.3 } }
 	option = {
 		name = "EVTOPTFRENCHCOLONIESCASKOA"
-		any_country = {
-			limit = {
-				has_country_flag = casko_tech
-			}
-			#Army Doctrine
-			activate_technology = post_napoleonic_thought 
-			activate_technology = strategic_mobility 
-			#Light Armament
-			activate_technology = flintlock_rifles 
-			activate_technology = muzzle_loaded_rifles 
-			#Heavy Armament
-			activate_technology = bronze_muzzle_loaded_artillery 
-			activate_technology = iron_muzzle_loaded_artillery 
-			#Military Science
-			activate_technology = military_staff_system 
-			activate_technology = military_plans 
-			#Army Leadership
-			activate_technology = army_command_principle
-			activate_technology = army_professionalism 
-			##Naval Doctrine
-			#Naval Doctrin
-			#contruction
-			activate_technology = clipper_design 
-			activate_technology = steamers
-			#Naval Engineering 
-			activate_technology = naval_design_bureaus 
-			activate_technology = fire_control_systems 
-			#Naval Science
-			activate_technology = alphabetic_flag_signaling 
-			activate_technology = naval_plans 
-			#Naval Leadership
-			activate_technology = the_command_principle 
-			activate_technology = naval_professionalism 
-			#Financhial Institutions
-			activate_technology = private_banks
-			activate_technology = stock_exchange
-			#Monetary System
-			activate_technology = no_standard
-			activate_technology = ad_hoc_money_bill_printing
-			activate_technology = private_bank_money_bill_printing
-			#Administration
-			activate_technology = early_classical_theory_and_critique 
-			activate_technology = late_classical_theory 
-			activate_technology = collectivist_theory 
-			#Market Functionality
-			activate_technology = freedom_of_trade
-			activate_technology = market_structure
-			activate_technology = business_regulations
-			#Organization
-			activate_technology = guild_based_production 
-			activate_technology = organized_factories 
-			activate_technology = scientific_management 
-			#Social Thought
-			activate_technology = malthusian_thought 
-			activate_technology = positivism 
-			activate_technology = functionalism 
-			#Political Thought
-			activate_technology = ideological_thought 
-			#Psycology
-			activate_technology = introspectionism 
-			activate_technology = associationism 
-			##Industry
-			#Power
-			activate_technology = piston_steam_engine
-			activate_technology = high_pressure_steam_engine 
-			activate_technology = hot_blast	
-			#Mechanization
-			activate_technology = mechanical_production
-			activate_technology = interchangeable_parts
-			#Metallugry
-			activate_technology = hot_blast	
-			#Infrastructure
-			activate_technology = experimental_railroad
-			#Chemistry and Electricity
-			activate_technology = basic_chemistry 
-			activate_technology = medicine 
-			}
+		#Army Doctrine
+		activate_technology = post_napoleonic_thought 
+		activate_technology = strategic_mobility 
+		#Light Armament
+		activate_technology = flintlock_rifles 
+		activate_technology = muzzle_loaded_rifles 
+		#Heavy Armament
+		activate_technology = bronze_muzzle_loaded_artillery 
+		activate_technology = iron_muzzle_loaded_artillery 
+		#Military Science
+		activate_technology = military_staff_system 
+		activate_technology = military_plans 
+		#Army Leadership
+		activate_technology = army_command_principle
+		activate_technology = army_professionalism 
+		##Naval Doctrine
+		#Naval Doctrin
+		activate_technology = post_nelsonian_thought 
+		activate_technology = battleship_column_doctrine 
+		#contruction
+		activate_technology = clipper_design 
+		activate_technology = steamers
+		#Naval Engineering 
+		activate_technology = naval_design_bureaus 
+		activate_technology = fire_control_systems 
+		#Naval Science
+		activate_technology = alphabetic_flag_signaling 
+		activate_technology = naval_plans 
+		#Naval Leadership
+		activate_technology = the_command_principle 
+		activate_technology = naval_professionalism 
+		#Financhial Institutions
+		activate_technology = private_banks
+		activate_technology = stock_exchange
+		#Monetary System
+		activate_technology = no_standard
+		activate_technology = ad_hoc_money_bill_printing
+		activate_technology = private_bank_money_bill_printing
+		#Administration
+		activate_technology = early_classical_theory_and_critique 
+		activate_technology = late_classical_theory 
+		activate_technology = collectivist_theory 
+		#Market Functionality
+		activate_technology = freedom_of_trade
+		activate_technology = market_structure
+		activate_technology = business_regulations
+		#Organization
+		activate_technology = guild_based_production 
+		activate_technology = organized_factories 
+		activate_technology = scientific_management 
+		#Social Thought
+		activate_technology = malthusian_thought 
+		activate_technology = positivism 
+		activate_technology = functionalism 
+		#Political Thought
+		activate_technology = ideological_thought 
+		#Psycology
+		activate_technology = introspectionism 
+		activate_technology = associationism 
+		##Industry
+		#Power
+		activate_technology = piston_steam_engine
+		activate_technology = high_pressure_steam_engine 
+		activate_technology = hot_blast	
+		#Mechanization
+		activate_technology = mechanical_production
+		activate_technology = interchangeable_parts
+		#Metallugry
+		activate_technology = hot_blast	
+		#Infrastructure
+		activate_technology = experimental_railroad
+		#Chemistry and Electricity
+		activate_technology = basic_chemistry 
+		activate_technology = medicine 
+	}
+}
+#####################################################
+##############tech##################################
+#####################################################
+country_event = {
+	id = 555556
+	title = "TECH"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	picture = "american-civil-war"
+	trigger = { has_country_flag = casko_south_africa }
+	mean_time_to_happen = { months = 1 modifier = { factor = 0.3 } }
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		any_owned = {
+		limit = {
+			NOT = { life_rating = 35 }
+		}
+		life_rating = 15
 		}
 	}
 }
