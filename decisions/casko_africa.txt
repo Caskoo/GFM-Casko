@@ -3,7 +3,6 @@ political_decisions = {
         picture = embrace_the_boer
         potential = {
 			has_country_flag = casko_release_nations_options
-			NOT = {  exists = TRA exists = ORB exists = VLK }
         }
         allow = {
 			NOT = {
@@ -20,37 +19,4 @@ political_decisions = {
         }
         ai_will_do = { factor = 0 }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
