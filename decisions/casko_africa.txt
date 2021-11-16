@@ -1,0 +1,56 @@
+political_decisions = {
+    casko_boor = {
+        picture = embrace_the_boer
+        potential = {
+			has_country_flag = casko_release_nations_options
+			NOT = {  exists = TRA exists = ORB exists = VLK }
+        }
+        allow = {
+			NOT = {
+                has_country_flag = released_south_africa
+                exists = PLC
+                exists = POL
+				exists = PLR
+				exists = WSF
+            }
+        }
+        effect = {
+
+            country_event = 61000
+        }
+        ai_will_do = { factor = 0 }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

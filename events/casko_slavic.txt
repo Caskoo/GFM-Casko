@@ -706,15 +706,12 @@ country_event = {
 	picture = "american-civil-war"
 	option = {
 		name = "EVTOPTYUGOCASKO"
-		SER = { all_core = { add_core = YUG } }
 		MON = { all_core = { add_core = YUG } }
 		CRO = { all_core = { add_core = YUG } }
 		BOS = { all_core = { add_core = YUG } }
 		SLO = { all_core = { add_core = YUG } }
-	    any_country = {
-	        release = YUG
-		}
 		YUG = {
+			capital = 794
 			years_of_research = 20
 			money = 5000000
 			leadership = 730

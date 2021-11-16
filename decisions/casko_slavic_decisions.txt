@@ -42,6 +42,19 @@ political_decisions = {
             NOT = { exists = YUG }
         }
         effect = {
+        SER = { all_core = { add_core = YUG remove_core = SER } }
+        TUR_788 = { add_core = YUG remove_core = TUR }
+        SER_794 = { add_core = YUG remove_core = TUR }
+        MON_2582 = { add_core = YUG remove_core = TUR }
+        TUR_803 = { add_core = YUG remove_core = TUR }
+        AUS_771 = { add_core = YUG remove_core = TUR }
+        AUS_2538 = { add_core = YUG remove_core = TUR remove_core = AUS }
+        AUS_780 = { add_core = YUG remove_core = TUR remove_core = AUS }
+        AUS_777 = { add_core = YUG remove_core = TUR remove_core = AUS }
+
+	    any_country = {
+	        release = YUG
+		}
             set_global_flag = yugoslavia_formed
             country_event = 1600000002
         }
