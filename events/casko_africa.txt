@@ -7,36 +7,41 @@ country_event = {
 	picture = "cape_map"
     option = {
     name = "TRN_ORA_RELEASE"
-		BSH = { all_core = { remove_core = MAT remove_core = BSH } }
-		ZUL = { all_core = { add_core = ORA remove_core = ZUL } }
-		MAT = { all_core = { remove_core = MAT remove_core = BSH } }
-		SUA = { all_core = { add_core = TRN remove_core = SUA } }
+		##cores
+		#TRN Cores
 		POR_2049 = { add_core = TRN }
-		#TRN
-		2105 = { change_province_name = "Pretoria" state_scope = { change_region_name = "Transvaal" } }
-		2106 = { change_province_name = "Witwatersrand" }
-		2107 = { change_province_name = "Klerksdorp" }
-		2108 = { change_province_name = "Nylstroom" }
-		2109 = { change_province_name = "Lydenburg" }
-		#ORA
-        2101 = { change_province_name = "Bloemfontein" add_core = ORA add_core = SAF }
-        2102 = { remove_core = MAT add_core = ORA add_core = SAF change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
-        2103 = { change_province_name = "Philippolis" add_core = ORA add_core = SAF }
+		TRN_2108 = { add_core = TRA }
+		#ORA Cores
+		ZUL_2113 = { add_core = ORA }
 		any_country = {
 			release = TRN
 			release = ORA		
 		}
-		TRN = { set_country_flag = casko_tech set_country_flag = casko_south_africa }
-		ORA = {	set_country_flag = casko_tech set_country_flag = casko_south_africa }
+		ORA = { all_core = { remove_core = MAT remove_core = BSH remove_core = ZUL remove_core = SUA remove_core = GAZ remove_core = NAL } }
+		TRN = { all_core = { remove_core = MAT remove_core = BSH remove_core = ZUL remove_core = SUA remove_core = GAZ remove_core = NAL } }
+		#renaming
+		#TRN
+		2105 = { change_province_name = "Pretoria" state_scope = { change_region_name = "Transvaal" } }
+		2106 = { change_province_name = "Witwatersrand" }
+		2107 = { change_province_name = "Klerksdorp" }
+		2108 = { change_province_name = "Nylstroom" }
+		2109 = { change_province_name = "Lydenburg" }
+		#ORA
+        2101 = { change_province_name = "Bloemfontein" }
+        2102 = { change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
+        2103 = { change_province_name = "Philippolis" }
+		TRN = { set_country_flag = casko_tech set_country_flag = casko_south_africa set_country_flag = casko_south_africa_pops }
+		ORA = {	set_country_flag = casko_tech set_country_flag = casko_south_africa set_country_flag = casko_south_africa_pops }
 		THIS = { country_event = 61001 }
 	}
     option = {
         name = "ORA_RELEASE"
-		BSH = { all_core = { remove_core = MAT remove_core = BSH } }
-		ZUL = { all_core = { add_core = ORA remove_core = ZUL } }
-		MAT = { all_core = { remove_core = MAT remove_core = BSH } }
-		SUA = { all_core = { add_core = TRN remove_core = SUA } }
-		TRN = { all_core = { add_core = ORA remove_core = TRN } }
+		##cores
+		#TRN Cores
+		POR_2049 = { add_core = ORA }
+		TRN_2108 = { add_core = ORA }
+		#ORA Cores
+		ZUL_2113 = { add_core = ORA }
 		#TRN
 		2105 = { change_province_name = "Pretoria" state_scope = { change_region_name = "Transvaal" } }
 		2106 = { change_province_name = "Witwatersrand" }
@@ -44,23 +49,24 @@ country_event = {
 		2108 = { change_province_name = "Nylstroom" }
 		2109 = { change_province_name = "Lydenburg" }
 		#ORA
-        2101 = { change_province_name = "Bloemfontein" add_core = ORA add_core = SAF }
-        2102 = { remove_core = MAT add_core = ORA add_core = SAF change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
-        2103 = { change_province_name = "Philippolis" add_core = ORA add_core = SAF }
+        2101 = { change_province_name = "Bloemfontein" }
+        2102 = { change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
+        2103 = { change_province_name = "Philippolis" }
 		any_country = {
 			release = ORA		
 		}
-		ORA = {	set_country_flag = casko_tech set_country_flag = casko_south_africa }
+		ORA = { all_core = { remove_core = MAT remove_core = BSH remove_core = ZUL remove_core = SUA remove_core = GAZ remove_core = NAL } }
+		ORA = {	set_country_flag = casko_tech set_country_flag = casko_south_africa set_country_flag = casko_south_africa_pops }
 		THIS = { country_event = 61002 }
 	}
 	option = {
 		name = "TRN_RELEASE"
-		BSH = { all_core = { remove_core = MAT remove_core = BSH } }
-		ZUL = { all_core = { add_core = ORA remove_core = ZUL } }
-		MAT = { all_core = { remove_core = MAT remove_core = BSH } }
-		SUA = { all_core = { add_core = TRN remove_core = SUA } }
-		ORA = { all_core = { add_core = TRN remove_core = ORA } }
+		##cores
+		#TRN Cores
 		POR_2049 = { add_core = TRN }
+		TRN_2108 = { add_core = TRN }
+		#ORA Cores
+		ZUL_2113 = { add_core = TRN }
 		#TRN
 		2105 = { change_province_name = "Pretoria" state_scope = { change_region_name = "Transvaal" } }
 		2106 = { change_province_name = "Witwatersrand" }
@@ -68,28 +74,29 @@ country_event = {
 		2108 = { change_province_name = "Nylstroom" }
 		2109 = { change_province_name = "Lydenburg" }
 		#ORA
-        2101 = { change_province_name = "Bloemfontein" add_core = ORA add_core = SAF }
-        2102 = { remove_core = MAT add_core = ORA add_core = SAF change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
-        2103 = { change_province_name = "Philippolis" add_core = ORA add_core = SAF }
+        2101 = { change_province_name = "Bloemfontein" }
+        2102 = { change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
+        2103 = { change_province_name = "Philippolis" }
 		any_country = {
 				release = TRN	
-			}
-			TNA = { set_country_flag = casko_tech set_country_flag = casko_south_africa }
-			THIS = { country_event = 61003 }
+		}
+		TRN = { all_core = { remove_core = MAT remove_core = BSH remove_core = ZUL remove_core = SUA remove_core = GAZ remove_core = NAL } }
+		TNA = { set_country_flag = casko_tech set_country_flag = casko_south_africa set_country_flag = casko_south_africa_pops }
+		THIS = { country_event = 61003 }
 	}
 	option = {
 	name = "VLK_RELEASE"
-		BSH = { all_core = { remove_core = MAT remove_core = BSH } }
-		ZUL = { all_core = { add_core = ORA remove_core = ZUL } }
-		MAT = { all_core = { remove_core = MAT remove_core = BSH } }
-		SUA = { all_core = { add_core = TRN remove_core = SUA } }
-		TRN = { all_core = { add_core = VLK remove_core = TRN } }
-		ORA = { all_core = { add_core = VLK remove_core = ORA } }
-		NAL = { all_core = { add_core = VLK remove_core = NAL } }
-		ORA = { all_core = { add_core = TRN remove_core = ORA } }
+		##cores
+		#TRN Cores
+		POR_2049 = { add_core = VLK }
+		TRN_2108 = { add_core = VLK }
+		#ORA Cores
+		ZUL_2113 = { add_core = VLK }
+		#Cape
 		ENG_2092 = { add_core = VLK }
 		ENG_2087 = { add_core = VLK }
 		ENG_2096 = { add_core = VLK }
+		#Madagascar
 		MAD_2117 = { add_core = VLK }
 		MAD_2121 = { add_core = VLK }
 		#TRN
@@ -105,7 +112,8 @@ country_event = {
 		any_country = {
 			release = VLK	
 		}
-		VLK = { set_country_flag = casko_tech set_country_flag = casko_south_africa }
+		VLK = { all_core = { remove_core = MAT remove_core = BSH remove_core = ZUL remove_core = SUA remove_core = GAZ remove_core = NAL remove_core = ORA remove_core = TRN } }
+		VLK = { set_country_flag = casko_tech set_country_flag = casko_south_africa set_country_flag = casko_south_africa_pops }
 		THIS = { country_event = 61004 }
 	}
 }
@@ -161,22 +169,6 @@ country_event = {
         }
 	}
 }
-country_event = {
-	id = 62001
-	title = "asss5"
-	desc = "EVTDESCFRENCHCOLONIESCASKO"
-	major = yes
-	fire_only_once = yes
-	picture = "american-civil-war"
-	trigger = {
-		year = 1837
-		tag = PLC
-	}
-	option = {
-		name = "EVTOPTFRENCHCOLONIESCASKOA"
-		PLC = { any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = craftsmen } reduce_pop = 2.0 } }
-	}
-}
 #ORA
 country_event = {
 	id = 61002
@@ -222,22 +214,6 @@ country_event = {
         }
 	}
 }
-country_event = {
-	id = 62002
-	title = "asss5"
-	desc = "EVTDESCFRENCHCOLONIESCASKO"
-	major = yes
-	fire_only_once = yes
-	picture = "american-civil-war"
-	trigger = {
-		year = 1837
-		tag = PLC
-	}
-	option = {
-		name = "EVTOPTFRENCHCOLONIESCASKOA"
-		PLC = { any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = craftsmen } reduce_pop = 2.0 } }
-	}
-}
 #TRN
 country_event = {
 	id = 61003
@@ -254,7 +230,7 @@ country_event = {
 			capital = 2110
             money = 2000000
             prestige = 30
-            leadership = 1020
+            leadership = 820
             government = hms_government
             machine_parts = 60000
             steel = 60000
@@ -281,22 +257,6 @@ country_event = {
 		ai_chance = {
             factor = 100
         }
-	}
-}
-country_event = {
-	id = 62003
-	title = "asss5"
-	desc = "EVTDESCFRENCHCOLONIESCASKO"
-	major = yes
-	fire_only_once = yes
-	picture = "american-civil-war"
-	trigger = {
-		year = 1837
-		tag = PLC
-	}
-	option = {
-		name = "EVTOPTFRENCHCOLONIESCASKOA"
-		PLC = { any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = craftsmen } reduce_pop = 2.0 } }
 	}
 }
 #VLK
@@ -341,22 +301,6 @@ country_event = {
 		ai_chance = {
             factor = 100
         }
-	}
-}
-country_event = {
-	id = 62004
-	title = "asss5"
-	desc = "EVTDESCFRENCHCOLONIESCASKO"
-	major = yes
-	fire_only_once = yes
-	picture = "american-civil-war"
-	trigger = {
-		year = 1837
-		tag = VLK
-	}
-	option = {
-		name = "EVTOPTFRENCHCOLONIESCASKOA"
-		PLC = { any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = craftsmen } reduce_pop = 2.0 } }
 	}
 }
 ########################################################
@@ -473,5 +417,28 @@ country_event = {
 	}
 	ai_chance = {
 		factor = 100
+	}
+}
+#####################################################
+##############craftsmen and clerks##################################
+#####################################################
+country_event = {
+	id = 63000
+	title = "asss5"
+	desc = "ass"
+	major = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	trigger = { has_country_flag = casko_south_africa_pops }
+	mean_time_to_happen = { months = 1 modifier = { factor = 0.3 } }
+	option = {
+	name = "wtf"
+		THIS = { 
+			any_pop = { limit = { has_pop_culture = boer type = craftsmen } reduce_pop = 4.5 }
+			any_pop = { limit = { has_pop_culture = boer type = clerks } reduce_pop = 4.5 }
+			any_pop = { limit = { has_pop_culture = boer type = capitalists } reduce_pop = 4.5 }
+			any_pop = { limit = { has_pop_culture = boer type = artisans } reduce_pop = 4.5 }
+			any_pop = { limit = { has_pop_culture = boer type = aristocrats } reduce_pop = 4.5 }
+		}
 	}
 }
