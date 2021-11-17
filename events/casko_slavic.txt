@@ -367,9 +367,8 @@ country_event = {
 			build_factory_in_capital_state = liquor_distillery
 			build_factory_in_capital_state = small_arms_factory 
 			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
-			any_owned = { assimilate = yes }
-			middle_strata = { reduce_pop = 2 } poor_strata = { reduce_pop = 2 } rich_strata = { reduce_pop = 2 } 
-			any_pop = { limit = { has_pop_culture = ukrainian type = soldiers } reduce_pop = 4.3 }
+			any_owned = { assimilate = yes } 
+			any_pop = { limit = { has_pop_culture = ukrainian type = soldiers } reduce_pop = 3.0 }
 			any_pop = { limit = { has_pop_culture = ukrainian type = bureaucrats } reduce_pop = 2.5 }
 			any_pop = { literacy = 0.55 }                
 			create_alliance = AUS

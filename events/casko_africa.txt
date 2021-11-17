@@ -10,7 +10,7 @@ country_event = {
 		##cores
 		#TRN Cores
 		POR_2049 = { add_core = TRN }
-		TRN_2108 = { add_core = TRA }
+		TRN_2108 = { add_core = TRN }
 		#ORA Cores
 		ZUL_2113 = { add_core = ORA }
 		any_country = {
@@ -78,7 +78,7 @@ country_event = {
         2102 = { change_province_name = "Winburg" state_scope = { change_region_name = "Vrystaat" } }
         2103 = { change_province_name = "Philippolis" }
 		any_country = {
-				release = TRN	
+			release = TRN	
 		}
 		TRN = { all_core = { remove_core = MAT remove_core = BSH remove_core = ZUL remove_core = SUA remove_core = GAZ remove_core = NAL } }
 		TNA = { set_country_flag = casko_tech set_country_flag = casko_south_africa set_country_flag = casko_south_africa_pops }
@@ -426,19 +426,20 @@ country_event = {
 	id = 63000
 	title = "asss5"
 	desc = "ass"
-	major = yes
-	fire_only_once = yes
 	picture = "american-civil-war"
 	trigger = { has_country_flag = casko_south_africa_pops }
 	mean_time_to_happen = { months = 1 modifier = { factor = 0.3 } }
 	option = {
 	name = "wtf"
 		THIS = { 
-			any_pop = { limit = { has_pop_culture = boer type = craftsmen } reduce_pop = 4.5 }
+			any_pop = { limit = { has_pop_culture = boer type = craftsmen } reduce_pop = 9.5 }
 			any_pop = { limit = { has_pop_culture = boer type = clerks } reduce_pop = 4.5 }
 			any_pop = { limit = { has_pop_culture = boer type = capitalists } reduce_pop = 4.5 }
 			any_pop = { limit = { has_pop_culture = boer type = artisans } reduce_pop = 4.5 }
-			any_pop = { limit = { has_pop_culture = boer type = aristocrats } reduce_pop = 4.5 }
 		}
+		clr_country_flag = casko_south_africa_pops
+	}
+	ai_chance = {
+		factor = 100
 	}
 }
