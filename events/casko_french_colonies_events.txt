@@ -1,49 +1,7 @@
 ####################################################
 #################French Canada######################
 ####################################################
-country_event = {
-	id = 500040
-	title = "asss5"
-	desc = "EVTDESCFRENCHCOLONIESCASKO"
-	major = yes
-	is_triggered_only = yes
-	fire_only_once = yes
-	picture = "american-civil-war"
-	option = {
-		name = "EVTOPTFRENCHCOLONIESCASKOA"
-		FCA = {
-			money = 2000000
-			leadership = 530
-			government = hms_government
-			machine_parts = 600000
-			steel = 600000 #was iron
-			cement = 600000
-			liquor = 600000
-			wine = 600000
-			small_arms = 600000
-			artillery = 600000
-			canned_food = 600000
-			build_factory_in_capital_state = fabric_factory
-			build_factory_in_capital_state = canned_food_factory
-			build_factory_in_capital_state = liquor_distillery
-			build_factory_in_capital_state = small_arms_factory 
-			any_owned_province = { add_province_modifier = { name = baby_boom duration = 1095 } }
-			add_country_modifier = { name = global_baby_boom duration = 3650 }
-			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
-			any_pop = { literacy = 0.40 }
-			capital = 58
-			middle_strata = { reduce_pop = 2 } poor_strata = { reduce_pop = 2 } rich_strata = { reduce_pop = 2 } 
-			any_owned = { assimilate = yes }
-			any_pop = { limit = { has_pop_culture = french_canadian type = soldiers } reduce_pop = 5.3 }
-			any_pop = { limit = { has_pop_culture = french_canadian type = bureaucrats } reduce_pop = 5.5 }
-			any_pop = { limit = { has_pop_culture = french_canadian type = capitalists } reduce_pop = 4.5 }
-			any_pop = { reduce_pop = 4 }
-			249 = { trade_goods = coal }
-			16 = { trade_goods = coal }
-			26 = { trade_goods = sulphur }
-		}
-	}
-}
+
 country_event = {
 	id = 500140
 	title = "asss5"
@@ -132,33 +90,7 @@ country_event = {
 	picture = "map_new_zealand"
 	option = {
 	name = "EVTOPTFRENCHCOLONIESCASKO"
-		NZL = { all_core = { add_core = NZF remove_core = NZL } }
-		any_country = {
-			release = NZF
-		}
-		NZF = {
-			money = 2000000
-			leadership = 130
-			government = hms_government
-			machine_parts = 60000
-			steel = 60000 #was iron
-			cement = 60000
-			liquor = 60000
-			wine = 60000
-			small_arms = 60000
-			artillery = 60000
-			canned_food = 60000
-			build_factory_in_capital_state = fabric_factory
-			build_factory_in_capital_state = canned_food_factory
-			build_factory_in_capital_state = liquor_distillery
-			build_factory_in_capital_state = small_arms_factory 
-			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
-			any_owned = { assimilate = yes }
-			any_pop = { limit = { has_pop_culture = neo_zelandais type = soldiers } reduce_pop = 2.9 }
-			any_pop = { limit = { has_pop_culture = neo_zelandais type = bureaucrats } reduce_pop = 3.5 }
-			any_pop = { limit = { has_pop_culture = neo_zelandais type = craftsmen } reduce_pop = 5.5 }
-			any_pop = { literacy = 0.40 }
-		}
+
 	}
 }
 country_event = {
@@ -187,63 +119,96 @@ country_event = {
 		}
 	}
 }
-####################################################
-#################French Louisiana###################
-####################################################
+#######################################
+#####French Colonies######
+#######################################
+#Nation options
 country_event = {
-	id = 500043
-	title = "EVTNAMEFRENCHCOLONIESCASKO"
-	desc = "EVTDESCFRENCHCOLONIESCASKO"
-	major = yes
-	is_triggered_only = yes
+	id = 51100
+    title = "CASKOPOLANDT"
+    desc = "CASKOPOLANDD"
+    major = yes
 	fire_only_once = yes
-	picture = "map_new_zealand"
+	is_triggered_only = yes
+	picture = "american-civil-war"
 	option = {
-	name = "EVTOPTFRENCHCOLONIESCASKO"
+		name = "FCAOPT"
+		CAN = { all_core = { add_core = FCA remove_core = CAN } }
+		QUE = { all_core = { add_core = FCA remove_core = QUE } }
+		NEW = { all_core = { add_core = FCA remove_core = NEW } }
+		RPL = { all_core = { add_core = FCA remove_core = RPL } }
+		MRU = { all_core = { add_core = FCA remove_core = MRU } }
+		ACA = { all_core = { add_core = FCA remove_core = ACA } }
+		COL = { all_core = { remove_core = COL  add_core = FCA } }
+		FCA = { all_core = { remove_core = USA } }
+		any_country = {
+			release = FCA
+		}
+		THIS = { country_event = 51110 }
+	}
+	option = {
+		name = "NZFOPT"
+		NZL = { all_core = { add_core = NZF remove_core = NZL } }
 		any_country = {
 			release = NZF
 		}
-		NZF = {
-			set_country_flag = post_colonial_country
-			2510 = { state_scope = { change_region_name = "Ile du Nord" } }
-			2516 = { state_scope = { change_region_name = "Ile du Sud" } }
-			2509 = { change_province_name = "Valenmans" }
-			2510 = { change_province_name = "Nouvelle-Bordeaux" }
-			2511 = { change_province_name = "Perouse" }
-			2512 = { change_province_name = "Nouvelle-Marseilles" }
-			2513 = { change_province_name = "Michel" }
-			2515 = { change_province_name = "Jeanne" }
-			2516 = { change_province_name = "Akaroa" }
-			money = 2000000
-			leadership = 130
-			government = hms_government
-			machine_parts = 60000
-			steel = 60000 #was iron
-			cement = 60000
-			liquor = 60000
-			wine = 60000
-			small_arms = 60000
-			artillery = 60000
-			canned_food = 60000
-			build_factory_in_capital_state = fabric_factory
-			build_factory_in_capital_state = canned_food_factory
-			build_factory_in_capital_state = liquor_distillery
-			build_factory_in_capital_state = small_arms_factory 
-			any_owned_province = { add_province_modifier = { name = baby_boom duration = 1095 } }
-			add_country_modifier = { name = global_baby_boom duration = 3650 }
-			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
-			any_pop = { literacy = 0.50 }
-			middle_strata = { reduce_pop = 2 } poor_strata = { reduce_pop = 2 } rich_strata = { reduce_pop = 2 } 
-			any_owned = { assimilate = yes }
-			any_pop = { limit = { has_pop_culture = neo_zelandais type = soldiers } reduce_pop = 5.9 }
-			any_pop = { limit = { has_pop_culture = neo_zelandais type = bureaucrats } reduce_pop = 4.5 }
-			any_pop = { limit = { has_pop_culture = neo_zelandais type = craftsmen } reduce_pop = 5.5 }
-			any_pop = { literacy = 0.40 }
-		}
+		THIS = { country_event = 51112 }
+	}
+	option = {
+		name = "POLOPT"
+		THIS = { country_event = 51113 }
+	}
+	option = {
+		name = "POLOPT"
+		THIS = { country_event = 51113 }
+	}
+	option = {
+		name = "POLOPT"
+		THIS = { country_event = 51113 }
+	}
+}
+#PLC Option
+country_event = {
+	id = 51110
+    title = "EVTNAME10PLCCASKO"
+    desc = "EVTDESC10PLCCASKO"
+    major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = "american-civil-war"
+	option = {
+		name = "PLCOPT"
+		PLC = {
+			capital = 706
+            money = 2000000
+            prestige = 30
+            leadership = 1020
+            government = hms_government
+            machine_parts = 60000
+            steel = 60000
+            cement = 60000
+            liquor = 60000
+            wine = 60000
+            small_arms = 60000
+            artillery = 60000
+            canned_food = 60000
+            build_factory_in_capital_state = fabric_factory
+            build_factory_in_capital_state = canned_food_factory
+            build_factory_in_capital_state = liquor_distillery
+            build_factory_in_capital_state = small_arms_factory
+            create_alliance = PRU
+            diplomatic_influence = { who = PRU value = 200 }
+            random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			middle_strata = { reduce_pop = 1 } poor_strata = { reduce_pop = 1 } rich_strata = { reduce_pop = 1 } 
+			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = soldiers } reduce_pop = 5.9 }
+			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = bureaucrats } reduce_pop = 4.5 }
+			any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = capitalists } reduce_pop = 3.5 }
+			any_pop = { literacy = 0.35 }  
+        }
 	}
 }
 country_event = {
-	id = 500149
+	id = 500145
 	title = "asss5"
 	desc = "EVTDESCFRENCHCOLONIESCASKO"
 	major = yes
@@ -251,10 +216,293 @@ country_event = {
 	picture = "american-civil-war"
 	trigger = {
 		year = 1837
-		tag = NZF
+		tag = PLC
 	}
 	option = {
 		name = "EVTOPTFRENCHCOLONIESCASKOA"
-		NZF = { any_pop = { limit = { has_pop_culture = neo_zelandais type = craftsmen } reduce_pop = 4.5 } }
+		PLC = { any_pop = { limit = { OR = { has_pop_culture = polish has_pop_culture = lithuanian } type = craftsmen } reduce_pop = 2.0 } }
 	}
+}
+#any_owned = { limit = { culture = polish } add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+country_event = {
+	id = 500040
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		FCA = {
+			money = 2000000
+			leadership = 530
+			government = hms_government
+			machine_parts = 600000
+			steel = 600000 #was iron
+			cement = 600000
+			liquor = 600000
+			wine = 600000
+			small_arms = 600000
+			artillery = 600000
+			canned_food = 600000
+			build_factory_in_capital_state = fabric_factory
+			build_factory_in_capital_state = canned_food_factory
+			build_factory_in_capital_state = liquor_distillery
+			build_factory_in_capital_state = small_arms_factory 
+			any_owned_province = { add_province_modifier = { name = baby_boom duration = 1095 } }
+			add_country_modifier = { name = global_baby_boom duration = 3650 }
+			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			any_pop = { literacy = 0.40 }
+			capital = 58
+			middle_strata = { reduce_pop = 2 } poor_strata = { reduce_pop = 2 } rich_strata = { reduce_pop = 2 } 
+			any_owned = { assimilate = yes }
+			any_pop = { limit = { has_pop_culture = french_canadian type = soldiers } reduce_pop = 5.3 }
+			any_pop = { limit = { has_pop_culture = french_canadian type = bureaucrats } reduce_pop = 5.5 }
+			any_pop = { limit = { has_pop_culture = french_canadian type = capitalists } reduce_pop = 4.5 }
+			any_pop = { reduce_pop = 4 }
+			249 = { trade_goods = coal }
+			16 = { trade_goods = coal }
+			26 = { trade_goods = sulphur }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+
+    id = 10405
+    title = "EVTNAME10405" #Louis-Napoleon's Coup d'Etat
+    desc = "EVTDESC10405"
+    news = yes
+    news_desc_long = "EVTDESC10405"
+    news_desc_medium = "EVTDESC10405_NEWS_MEDIUM"
+    news_desc_short = "EVTDESC10405_NEWS_SHORT"
+    picture = "napoleonthreecoup"
+	major = yes
+
+    trigger = {
+        primary_culture = french
+        is_greater_power = yes
+        capital = 425
+        has_country_flag = 2nd_republic
+        has_country_modifier = louis_napoleon_iii
+		OR = {
+			government = democracy
+			has_country_flag = Government_Democracy	
+		}
+        OR = {
+            election = yes
+            AND = {
+                ai = yes
+                year = 1852
+            }
+        }
+        year = 1850
+        rank = 4
+        is_disarmed = no
+        NOT = {
+            year = 1870
+            has_country_flag = louis_deposed
+            has_country_flag = 2nd_empire
+        }
+    }
+
+    mean_time_to_happen =  {
+        days = 4
+    }
+
+    option = {
+        name = "EVT10405OPTA"
+        FRA = { set_country_flag = napoleons_coup_de_tat }
+        BOR = { set_country_flag = napoleons_coup_de_tat }
+        any_country = {
+            limit = {
+                is_greater_power = yes
+                capital_scope = { continent = europe }
+                NOT = { tag = RUS }
+                NOT = { tag = ENG }
+                NOT = { is_culture_group = germanic }
+            }
+            relation = { who = THIS value = -30 }
+        }
+        any_country = {
+            limit = {
+                is_culture_group = germanic
+                capital_scope = { continent = europe }
+            }
+            relation = { who = THIS value = -100 }
+        }
+        random_country = {
+            limit = {
+                tag = RUS
+                OR = {
+                    government = absolute_monarchy
+                    government = prussian_constitutionalism
+                    government = hms_government
+                    government = absolute_empire
+                    government = semi_constitutional_empire
+                    government = constitutional_empire
+                }
+            }
+            relation = { who = THIS value = -75 }
+        }
+        random_country = {
+            limit = {
+                tag = ENG
+                OR = {
+                    government = absolute_monarchy
+                    government = prussian_constitutionalism
+                    government = hms_government
+                    government = absolute_empire
+                    government = semi_constitutional_empire
+                    government = constitutional_empire
+                }
+            }
+            relation = { who = THIS value = -75 }
+        }
+        prestige = 25
+        government = absolute_empire
+		clr_country_flag = Government_Democracy
+		set_country_flag = absolute_monarchy_gov
+        ruling_party_ideology = conservative
+        political_reform = none_voting
+        political_reform = appointed
+        political_reform = no_meeting
+        political_reform = censored_press
+        political_reform = no_trade_unions
+        political_reform = underground_parties
+        set_country_flag = 2nd_empire
+        upper_house = {
+            ideology = conservative
+            value = 0.40
+        }
+        upper_house = {
+            ideology = reactionary
+            value = 0.20
+        }
+        any_pop = {
+            limit = {
+                location = { is_core = THIS }
+                OR = {
+                    type = soldiers
+                    type = officers
+                }
+            }
+            ideology = { factor = 0.3 value = conservative }
+            ideology = { factor = 0.1 value = reactionary }
+            militancy = -4
+        }
+        any_pop = {
+            limit = {
+                location = { is_core = THIS }
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = -4
+            }
+            scaled_consciousness = {
+                ideology = conservative
+                factor = -4
+            }
+            scaled_militancy = {
+                ideology = liberal
+                factor = 4
+            }
+            scaled_consciousness = {
+                ideology = liberal
+                factor = 4
+            }
+            scaled_militancy = {
+                ideology = radical
+                factor = 6
+            }
+        }
+        any_owned = {
+            remove_province_modifier = labor_union
+            remove_province_modifier = militant_trade_union
+            remove_province_modifier = worker_union
+            remove_province_modifier = strike_solution
+            remove_province_modifier = province_strike
+            remove_province_modifier = may_day
+        }
+
+        any_country = {
+            limit = {
+                vassal_of = THIS
+                exists = yes
+				NOT = { government = absolute_monarchy }
+            }
+            government = absolute_monarchy
+        }
+    }
 }

@@ -64,6 +64,9 @@ political_decisions = {
             factor = 0
         }
     }
+####################################################
+#################french_colonial_louisiana###################
+####################################################
     french_colonial_louisiana = {
         picture = dreams_of_empire
         potential = {
