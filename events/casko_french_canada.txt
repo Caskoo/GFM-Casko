@@ -1,0 +1,48 @@
+country_event = {
+	id = 500040
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		FCA = {
+			money = 2000000
+			leadership = 530
+			government = hms_government
+			machine_parts = 600000
+			steel = 600000 #was iron
+			cement = 600000
+			liquor = 600000
+			wine = 600000
+			small_arms = 600000
+			artillery = 600000
+			canned_food = 600000
+			build_factory_in_capital_state = fabric_factory
+			build_factory_in_capital_state = canned_food_factory
+			build_factory_in_capital_state = liquor_distillery
+			build_factory_in_capital_state = small_arms_factory 
+			any_owned_province = { add_province_modifier = { name = baby_boom duration = 1095 } }
+			add_country_modifier = { name = global_baby_boom duration = 3650 }
+			random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
+			any_pop = { literacy = 0.40 }
+			capital = 58
+			middle_strata = { reduce_pop = 1 } poor_strata = { reduce_pop = 1 } rich_strata = { reduce_pop = 1 } 
+			any_owned = { assimilate = yes }
+			any_pop = { limit = { has_pop_culture = french_canadian type = soldiers } reduce_pop = 5.3 }
+			any_pop = { limit = { has_pop_culture = french_canadian type = bureaucrats } reduce_pop = 5.5 }
+			any_pop = { limit = { has_pop_culture = french_canadian type = capitalists } reduce_pop = 4.5 }
+			any_pop = { reduce_pop = 4 }
+			249 = { trade_goods = coal }
+			16 = { trade_goods = coal }
+			26 = { trade_goods = sulphur }
+		}
+	}
+}
+
+#add_province_modifier = {
+#	name = core_integration
+#	duration = -1
+#}

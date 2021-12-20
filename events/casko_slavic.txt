@@ -179,46 +179,6 @@ country_event = {
 		}
 	}
 }
-#######################################
-#################PLC###################
-#######################################
-#Nation options
-country_event = {
-	id = 51100
-    title = "CASKOPOLANDT"
-    desc = "CASKOPOLANDD"
-    major = yes
-	fire_only_once = yes
-	is_triggered_only = yes
-	picture = "american-civil-war"
-	option = {
-		name = "PLCOPT"
-		LIT = { all_core = { add_core = PLC remove_core = LIT } }
-		POL = { all_core = { add_core = PLC remove_core = POL } }
-		PLC = {	all_core = { remove_core = RUS remove_core = AUS remove_core = PRU } }
-		any_country = {
-			release = PLC
-		}
-		THIS = { country_event = 51110 }
-	}
-	option = {
-		name = "WSFOPT"
-		PZN = { all_core = { add_core = WSF } }
-		POL = { all_core = { add_core = WSF } }
-		CZH = { all_core = { add_core = WSF } }
-		CPL = { all_core = { add_core = WSF } }
-		PML = { all_core = { add_core = WSF } }
-		WSF = {	all_core = { remove_core = RUS remove_core = AUS remove_core = PRU } }
-		any_country = {
-			release = WSF
-		}
-		THIS = { country_event = 51112 }
-	}
-	option = {
-		name = "POLOPT"
-		THIS = { country_event = 51113 }
-	}
-}
 #PLC Option
 country_event = {
 	id = 51110

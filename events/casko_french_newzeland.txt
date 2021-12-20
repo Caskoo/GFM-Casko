@@ -1,0 +1,26 @@
+country_event = {
+	id = 500142
+	title = "asss5"
+	desc = "EVTDESCFRENCHCOLONIESCASKO"
+	major = yes
+	fire_only_once = yes
+	picture = "american-civil-war"
+	trigger = {
+		year = 1837
+		tag = NZF
+	}
+	option = {
+		name = "EVTOPTFRENCHCOLONIESCASKOA"
+		NZF = { any_pop = { limit = { has_pop_culture = neo_zelandais type = craftsmen } reduce_pop = 4.5 } 
+		2510 = { state_scope = { change_region_name = "Ile du Nord" } }
+		2516 = { state_scope = { change_region_name = "Ile du Sud" } }
+		2509 = { change_province_name = "Valenmans" }
+		2510 = { change_province_name = "Nouvelle-Bordeaux" }
+		2511 = { change_province_name = "Perouse" }
+		2512 = { change_province_name = "Nouvelle-Marseilles" }
+		2513 = { change_province_name = "Michel" }
+		2515 = { change_province_name = "Jeanne" }
+		2516 = { change_province_name = "Akaroa" }
+		}
+	}
+}
